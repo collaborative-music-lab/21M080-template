@@ -1,7 +1,7 @@
 //example of P5.js code in my mode
 //https://youtu.be/Su792jEauZg
 // import p5 from './p5';
-import "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"
+//import "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"
 
 let x_size, y_size;
 let globalScale = 1;
@@ -27,7 +27,7 @@ const gui_sketch = function (my) {
   // my.color VARS
     my.color1 = my.color(255, 40, 0); // main color
     my.color2 = my.color(170, 176, 180); // secondary color
-    my.color3 = my.color(220, 229, 234); // background
+    my.color3 = my.color(0, 229, 234); // background
     my.color4 = my.color(30); // text
 
   my.setup = function () {
@@ -1033,4 +1033,4 @@ const gui_sketch = function (my) {
   }
 } // END OF GUI p5 INSTANCE
 
-export default gui_sketch;
+window.gui = new p5(gui_sketch)
