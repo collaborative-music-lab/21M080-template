@@ -1,4 +1,6 @@
 //all of your synth and gui code can go here
+window.gui = new p5(sketch, 'p5-container');
+
 let output = new Tone.Multiply(0.1).toDestination()
 
 const vco = new Tone.Oscillator(400).start()
@@ -11,7 +13,9 @@ let trigNote = function(){
   env.triggerAttackRelease(0.1)
 }
 
-//const gui = new p5(gui_sketch)
+console.log("sketch")
+
+// //const gui = new p5(gui_sketch)
 let freq_knob = gui.Knob({
   label: 'freq', 
   mapto: vco.frequency,
@@ -26,6 +30,8 @@ let decay_knob = gui.Knob({
   min:.01, max: 1, curve:2,
   x:40,y:20
 })
+
+gui.line(0,0,100,100)
 
 
 let startEnable = 0
