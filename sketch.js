@@ -31,8 +31,6 @@ let decay_knob = gui.Knob({
   x:40,y:20
 })
 
-gui.line(0,0,100,100)
-
 
 let startEnable = 0
 let seq

@@ -4,7 +4,9 @@
         let grey = p.color(220, 229, 234);
 
         p.setup = function() {
-            let div = document.getElementById('p5-container');
+            let divID = p.canvas.parentElement.id;
+            let div = document.getElementById(p.canvas.parentElement.id);
+            //let div = document.getElementById('p5-container');
             p.initialize(div);
         };
 
